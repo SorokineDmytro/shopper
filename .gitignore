@@ -1,0 +1,31 @@
+# ---- Secrets ----
+.env
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+*.pot
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+
+# ---- Django ----
+media/
+staticfiles/
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- IDEs ----
+.vscode/
+.idea/
+
+# ---- Docker ----
+*.tar

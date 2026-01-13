@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:16
+    container_name: shopper_db
+    environment:
+      POSTGRES_DB: ${SQL_DATABASE}
+      POSTGRES_USER: ${SQL_USER}
+      POSTGRES_PASSWORD: ${SQL_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  # api:
+  #   build: ./shopper
+  #   container_name: shopper_api
+  #   entrypoint: ["/code/entrypoint.sh"]
+  #   command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+  #   volumes:
+  #     - ./shopper:/code
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - db
+  #   ports:
+  #     - "8000:8000"
+
+
+volumes:
+  postgres_data:
